@@ -1,0 +1,13 @@
+{{#each this}}
+    <div class="cat-name">
+        {{name}}
+    </div>
+
+    <div class="cat-programs">
+        {{#each data}}
+            {{#showHospitalProgramLayer @key this}}
+            {{/showHospitalProgramLayer}}
+
+        {{/each}}
+    </div>
+{{/each}}
