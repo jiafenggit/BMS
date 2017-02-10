@@ -15,7 +15,7 @@ Route::group(['domain' => 'store.dwy.com','namespace'=>'Admin'], function ($rout
 
     $router->get('logout','LoginController@logout');
     $router->group(['middleware' => 'auth:admin'],function($router){
-        $router->get('/', 'IndexController@index');
+        $router->get('/index', 'IndexController@index');
 
         #RBAC
         $router->resource('admins', 'AdminController');//管理员管理
